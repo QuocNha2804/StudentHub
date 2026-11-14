@@ -23,6 +23,13 @@
             <version>3.3.3</version>
         </dependency>
 
+        <!-- Tắt cảnh báo SLF4J của MariaDB Driver trên Console -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-nop</artifactId>
+            <version>2.0.7</version>
+        </dependency>
+
         <!-- jBCrypt for Password Hashing -->
         <dependency>
             <groupId>org.mindrot</groupId>
@@ -46,8 +53,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.13.0</version>
                 <configuration>
-                    <source>21</source>
-                    <target>21</target>
+                    <release>21</release>
                     <encoding>UTF-8</encoding>
                     <annotationProcessorPaths>
                         <path>

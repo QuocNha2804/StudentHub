@@ -1,0 +1,25 @@
+[2026-11-14 10:36:52] [INFO] === Khởi động ứng dụng StudentHub ===
+[2026-11-14 10:36:53] [SEVERE] Lỗi kết nối Cơ sở dữ liệu MariaDB
+Exception: java.sql.SQLInvalidAuthorizationSpecException: (conn=4) Access denied for user 'root'@'localhost' (using password: YES)
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:293)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.client.impl.ConnectionHelper.authenticationHandler(ConnectionHelper.java:279)
+	at org.mariadb.jdbc.client.impl.StandardClient.<init>(StandardClient.java:195)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:69)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:95)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:26)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at com.studenthub.config.DBConnection.getConnection(DBConnection.java:26)
+	at com.studenthub.config.DatabaseInitializer.initialize(DatabaseInitializer.java:22)
+	at com.studenthub.Main.main(Main.java:20)
+[2026-11-14 10:36:53] [SEVERE] Khởi tạo Database thất bại
+Exception: com.studenthub.exception.AppException: Không thể kết nối tới MariaDB (jdbc:mariadb://localhost:3306/studenthub?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=UTF-8). Vui lòng kiểm tra MariaDB Server và file db.properties. Chi tiết: (conn=4) Access denied for user 'root'@'localhost' (using password: YES)
+	at com.studenthub.config.DBConnection.getConnection(DBConnection.java:33)
+	at com.studenthub.config.DatabaseInitializer.initialize(DatabaseInitializer.java:22)
+	at com.studenthub.Main.main(Main.java:20)
+[2026-11-14 10:44:15] [INFO] === Khởi động ứng dụng StudentHub ===
+[2026-11-14 10:44:15] [INFO] Đã kiểm tra và khởi tạo schema CSDL thành công.
+[2026-11-14 10:44:15] [INFO] Seed dữ liệu mẫu thành công (adminUserId=1).
+[2026-11-14 10:45:10] [WARNING] Đăng nhập thất bại: Không tìm thấy username 'quocnha'
+[2026-11-14 10:45:33] [INFO] Đăng nhập thành công: username=gv001, role=TEACHER
